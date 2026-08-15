@@ -7,5 +7,10 @@
   },
   "scenario_order": ["Example Scenario"],
   "current_scenario": "Example Scenario",
+  "active_scenario": {
+    "slug": "example-scenario",
+    "path": "games/example/campaigns/example-campaign/scenarios/example-scenario/state.json",
+    "status": "in_progress"
+  },
   "campaign_state": {}
 }

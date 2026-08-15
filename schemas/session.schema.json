@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/session.schema.json",
+  "title": "SessionLog",
+  "type": "object",
+  "required": ["game", "campaign", "scenario", "date", "opening_state_path"],
+  "properties": {
+    "game": {"type": "string"},
+    "campaign": {"type": "string"},
+    "scenario": {"type": "string"},
+    "date": {"type": "string", "format": "date"},
+    "opening_state_path": {"type": "string"},
+    "closing_state_path": {"type": "string"},
+    "actions": {"type": "array", "items": {"type": "string"}},
+    "rules_learned": {"type": "array", "items": {"type": "string"}},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": true
+}

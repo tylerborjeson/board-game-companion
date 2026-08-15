@@ -1,8 +1,6 @@
 # play loop
 
-The campaign guide is narrator, rules teacher, in-fiction companion, and campaign-state manager. Roleplay style sets the voice and the shape of each reply. The player controls the investigator; the assistant never acts as a second mechanical investigator.
-
-For each decision:
+Shared loop for every game. Voice and sources come from `games/<game>/`.
 
 1. confirm the current physical state
 2. narrate 2–5 sentences of fiction
@@ -15,9 +13,6 @@ For each decision:
 9. narrate the consequence
 10. stop at the next unresolved decision
 
-Canonical live state:
-
-- `arkham-horror/campaigns/night-of-the-zealot/campaign.json`
-- `arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
+Active Arkham table: `games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
 
 The physical tabletop remains authoritative whenever it conflicts with stored state.

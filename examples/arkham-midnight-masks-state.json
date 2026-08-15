@@ -1,0 +1,27 @@
+{
+  "scenario": "The Midnight Masks",
+  "status": "in_progress",
+  "round": 6,
+  "phase": "investigation",
+  "actions_remaining": 0,
+  "investigator": {
+    "name": "Roland Banks",
+    "location": "Miskatonic University",
+    "resources": 4,
+    "clues": 1,
+    "damage": 2,
+    "horror": 1,
+    "hand": [],
+    "in_play": [],
+    "discard": []
+  },
+  "locations": {},
+  "enemies": [],
+  "act": {},
+  "agenda": {},
+  "decks": {},
+  "next_decision": {
+    "type": "enemy_phase",
+    "prompt": "Resolve hunter movement, then engaged enemy attacks."
+  }
+}

@@ -3,13 +3,23 @@
   "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/campaign.schema.json",
   "title": "Campaign",
   "type": "object",
-  "required": ["campaign", "investigator", "scenario_order", "current_scenario"],
+  "required": ["campaign", "investigator", "scenario_order", "current_scenario", "active_scenario"],
   "properties": {
     "campaign": {"type": "string"},
     "investigator": {"type": "string"},
     "player_count": {"type": "integer", "minimum": 1},
-    "scenario_order": {"type": "array", "items": {"type": "string"}},
+    "scenario_order": {"type": "array", "items": {"type": "string"}, "minItems": 1},
     "current_scenario": {"type": "string"},
+    "active_scenario": {
+      "type": "object",
+      "required": ["slug", "path", "status"],
+      "properties": {
+        "slug": {"type": "string"},
+        "path": {"type": "string"},
+        "status": {"type": "string", "enum": ["in_progress", "complete", "not_started"]}
+      },
+      "additionalProperties": false
+    },
     "rules_sources": {"type": "object", "additionalProperties": {"type": "string"}},
     "campaign_state": {"type": "object"}
   },

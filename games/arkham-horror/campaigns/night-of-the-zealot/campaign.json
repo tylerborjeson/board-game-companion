@@ -9,6 +9,11 @@
   },
   "scenario_order": ["The Gathering", "The Midnight Masks", "The Devourer Below"],
   "current_scenario": "The Midnight Masks",
+  "active_scenario": {
+    "slug": "the-midnight-masks",
+    "path": "games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json",
+    "status": "in_progress"
+  },
   "campaign_state": {
     "mental_trauma": 1,
     "experience_unspent": 1,

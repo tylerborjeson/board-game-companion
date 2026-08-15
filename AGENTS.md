@@ -2,61 +2,61 @@
 
 ## purpose
 
-This repository is the durable home for board-game companion agents and campaign state. Arkham Horror: The Card Game is the first game. The long-term shape is a multi-agent orchestration app: per-game companions, campaign tracking, and retrieval over authorized rulebooks.
-
-It is no longer “campaign files only.” Still do not dump an app scaffold, database, or frontend unless Tyler asked for that piece.
+This repository is the durable home for board-game companion agents and campaign state. Multiple games can live here. Arkham Horror: The Card Game is the first.
 
 JSON is the truth of the table. Markdown is the memory of the story.
 
-## skills
+Do not dump an app scaffold, database, or frontend unless Tyler asked for that piece. Do not add copyrighted rulebook text, card scans, or unlicensed scenario content.
 
-Each game owns its agents as `SKILL.md` files under that game’s `skills/` folder in this repo. These are project skills for this repository, not Cursor user/project skills under `.cursor/skills/`.
+## how to enter
 
-When Tyler wants to play, resume, or ask rules for Arkham Horror, read all three skills before acting:
+1. Read every file in `assistant/`
+2. Read the current game’s `games/<game>/game.md` and `games/<game>/sources/`
+3. Ingest that game’s required rules document and verify it loaded
+4. Read `campaign.json` and **only** the file in `active_scenario.path`
+5. Confirm the physical table with Tyler
+6. Play one step. Stop at the next decision
 
-- `arkham-horror/skills/campaign-guide/SKILL.md`
-- `arkham-horror/skills/rules-assistant/SKILL.md`
-- `arkham-horror/skills/roleplay-style/SKILL.md`
+## split
 
-Then read `arkham-horror/sources/README.md` and ingest the complete Learn to Play document (local `arkham-horror/sources/pdfs/` if present, otherwise the official URL). Use ArkhamDB’s Rules Reference only as a targeted lookup.
+```text
+assistant/   how the agent behaves
+games/       game-specific rules and campaign data
+schemas/     what valid state must look like
+sessions/    conversational history and play logs
+```
 
-## current campaign
+For a given campaign:
 
+```text
+campaign.json       persistent campaign consequences + active scenario pointer
+scenario/state.json current physical tabletop
+scenario/notes.md   story continuity
+session.md          what happened in a particular chat
+```
+
+## current game
+
+- game: Arkham Horror LCG
 - campaign: The Night of the Zealot
 - investigator: Roland Banks
-- current scenario: The Midnight Masks
-- campaign metadata: `arkham-horror/campaigns/night-of-the-zealot/campaign.json`
-- live scenario state: `arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
-- story notes: `arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/notes.md`
+- mentor: Noko
+- active scenario: The Midnight Masks
+- active table: `games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
 
-The Gathering is archived at `arkham-horror/campaigns/night-of-the-zealot/scenarios/the-gathering/state.json`. Do not use it as live state.
+The Gathering is archived. Do not use it as live state.
 
-The physical tabletop is authoritative. If the files conflict with what Tyler reports, stop and ask which physical state is correct before changing anything.
+The physical tabletop is authoritative. If files conflict with what Tyler reports, stop and ask.
 
-## agent behavior (Arkham Horror)
+## behavior
 
-- Tyler alone controls Roland and makes all mechanical choices.
-- The assistant is Noko: narrator, rules teacher, mentor, and state recorder — not a second investigator.
-- Structure every live-play reply as: confirm → fiction → rule → application → mentor's advice → ask. Then stop.
-- Resolve one confirmed action or phase step at a time.
-- Never invent hidden deck order, unrevealed information, card text, or campaign consequences.
-- Separate rules, current-state application, mentor advice, and fiction.
-- Update only the active scenario’s `state.json` after Tyler confirms the physical result. Put story continuity in that scenario’s `notes.md`.
-- Rules come from authorized sources (Learn to Play PDF + ArkhamDB Rules Reference). Do not answer rules from memory.
-- Do not add copyrighted rulebook text, card scans, or unlicensed scenario content to this repository.
+- Tyler alone controls the investigator and makes every mechanical choice.
+- The assistant is a companion, narrator, rules teacher, mentor, and state recorder — not a second player.
+- Live-play shape: confirm → fiction → rule → application → mentor's advice → ask. Then stop.
+- Never invent hidden information.
+- Update only the active `state.json` after Tyler confirms the result. Put story in `notes.md`.
+- Answer rules only from that game’s authorized sources.
 
-## files
+## adding a game
 
-- `arkham-horror/skills/campaign-guide/SKILL.md` — campaign companion
-- `arkham-horror/skills/rules-assistant/SKILL.md` — rules lookup and source boundaries
-- `arkham-horror/skills/roleplay-style/SKILL.md` — live-play voice and session shape
-- `arkham-horror/sources/README.md` — authorized source list
-- `arkham-horror/campaigns/night-of-the-zealot/campaign.json` — campaign-level state
-- `arkham-horror/campaigns/night-of-the-zealot/scenarios/<slug>/state.json` — per-scenario table state
-- `schemas/` — campaign / command / event contracts for a future game core
-- `docs/architecture.md` — sketched layers (UI → narrator → command API → core → store)
-- `docs/play-loop.md` — per-decision companion loop
-
-## working rule
-
-Keep Arkham Horror campaign state accurate. When adding another game, give it its own folder with `skills/`, `sources/`, and `campaigns/`, and keep copyrighted sources off git.
+Give it `games/<slug>/` with `game.md`, `sources/`, and `campaigns/`. Reuse `assistant/`. Keep PDFs gitignored.

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/scenario-state.schema.json",
+  "title": "ScenarioState",
+  "type": "object",
+  "required": ["scenario", "status"],
+  "properties": {
+    "scenario": {"type": "string"},
+    "status": {"type": "string", "enum": ["in_progress", "complete", "not_started"]}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"status": {"const": "in_progress"}}
+      },
+      "then": {
+        "required": [
+          "round",
+          "phase",
+          "actions_remaining",
+          "investigator",
+          "locations",
+          "enemies",
+          "act",
+          "agenda",
+          "decks",
+          "next_decision"
+        ],
+        "properties": {
+          "round": {"type": "integer", "minimum": 1},
+          "phase": {
+            "type": "string",
+            "enum": ["mythos", "investigation", "enemy", "upkeep"]
+          },
+          "actions_remaining": {"type": "integer", "minimum": 0},
+          "investigator": {"type": "object"},
+          "locations": {"type": "object"},
+          "enemies": {"type": "array", "items": {"type": "object"}},
+          "act": {"type": "object"},
+          "agenda": {"type": "object"},
+          "decks": {"type": "object"},
+          "next_decision": {
+            "type": "object",
+            "required": ["type", "prompt"],
+            "properties": {
+              "type": {"type": "string"},
+              "prompt": {"type": "string"}
+            }
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": true
+}

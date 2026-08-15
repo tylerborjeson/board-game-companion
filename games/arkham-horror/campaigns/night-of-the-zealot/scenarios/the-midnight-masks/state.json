@@ -1,0 +1,72 @@
+{
+  "scenario": "The Midnight Masks",
+  "status": "in_progress",
+  "round": 6,
+  "phase": "investigation",
+  "actions_remaining": 0,
+  "investigator": {
+    "name": "Roland Banks",
+    "location": "Miskatonic University",
+    "resources": 4,
+    "clues": 1,
+    "damage": 2,
+    "horror": 1,
+    "hand": [
+      {"name": "Hyperawareness", "card": 34},
+      {"name": "I've had worse...", "card": 184},
+      {"name": "Dodge", "card": 23},
+      {"card": 19},
+      {"name": "Medical Texts", "card": 35}
+    ],
+    "in_play": [
+      {"name": "Flashlight", "card": 87, "supplies_remaining": 2},
+      {"name": "Hyperawareness", "card": 34},
+      {"name": "Machete", "card": 20},
+      {"name": "Lita Chantler", "card": 117, "slot": "ally"}
+    ],
+    "discard": [
+      {"name": "Emergency Cache", "card": 88},
+      {"name": "Evidence!", "card": 22}
+    ],
+    "deck_status": "Physical deck is authoritative; current hand and played cards confirmed by Tyler"
+  },
+  "locations": {
+    "Downtown": {"revealed": true, "clues": 0, "shroud": 4, "locked_door": true, "ability": "Once per game, action: heal up to 3 horror"},
+    "Northside": {"revealed": true, "clues": 1, "shroud": 3, "ability": "Spend 5 resources as an action to gain 2 clues from the token pool; group limit once per game"},
+    "Southside": {"revealed": false, "clues": 0, "shroud": 2, "enemy_spawned_here": "Acolyte (#169)"},
+    "Easttown": {"revealed": true, "clues": 1, "shroud": 2},
+    "Miskatonic University": {"revealed": true, "clues": 2, "shroud": 4, "enemy_spawned_here": "Peter Warren (#139)", "card": 129},
+    "Rivertown": {"revealed": true, "clues": 1, "shroud": 1}
+  },
+  "unconfirmed": {
+    "other_locations": "Setup/map position is physically present; details not yet confirmed in this state file"
+  },
+  "enemies": [
+    {"name": "Hunting Nightgaunt", "card": 172, "location": "Northside", "engaged_with": null, "ready": true, "health": 4},
+    {"name": "Peter Warren", "card": 139, "location": "Miskatonic University", "engaged_with": "Roland Banks", "ready": true, "health": 1},
+    {"name": "Acolyte", "card": 169, "location": "Southside", "engaged_with": null, "ready": true, "health": 1, "doom": 1}
+  ],
+  "act": {
+    "name": "Uncovering the Conspiracy",
+    "card": 123,
+    "side": "1a",
+    "cultists_in_victory_display": 0,
+    "clues_spent_to_reveal_cultist": 2
+  },
+  "agenda": {
+    "name": "Predator or Prey?",
+    "card": "121a",
+    "doom": 5,
+    "threshold": 6
+  },
+  "doom_total_in_play": 6,
+  "decks": {
+    "cultist": {"separate": true, "count": 5, "order_known": false},
+    "encounter": {"separate": true, "order_known": false}
+  },
+  "last_confirmed_action": "Round 5 completed: Nightgaunt moved to Northside; Peter Warren attacked Roland for 1 damage; Upkeep drew Lita Chantler and gained 1 resource; round 6 Mythos placed agenda doom and spawned an Acolyte at Southside with 1 doom",
+  "next_decision": {
+    "type": "enemy_phase",
+    "prompt": "Investigation Phase complete. Resolve hunter movement, then Peter Warren's attack."
+  }
+}
