@@ -14,6 +14,7 @@ assistant/                 how the agent behaves
 games/<game>/              rules, sources, and campaign data
 schemas/                   valid campaign / table / session shape
 sessions/<game>/           optional play logs
+scripts/arkham-card        revealed-card lookup by collector number
 ```
 
 ```text

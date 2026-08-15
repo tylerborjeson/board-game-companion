@@ -16,6 +16,9 @@ Authorized corpus only:
 
 1. 2021 Revised Core Set Learn to Play — see `sources/learn-to-play.md`
 2. ArkhamDB Rules Reference — see `sources/rules-reference.md`
+3. ArkhamDB public API — revealed-card lookup only; see `sources/arkhamdb-api.md`
+
+When Tyler gives a collector number, run `scripts/arkham-card <number>`. Do not ask him to read the card first. The physical card still wins if it conflicts.
 
 Do not use the Campaign Guide or outside scenario text unless Tyler authorizes it. Ask him to read or provide story text that is outside this corpus.
 

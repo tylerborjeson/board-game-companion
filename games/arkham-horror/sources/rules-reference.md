@@ -7,4 +7,4 @@ Precision lookup for glossary, timing, setup, card abilities, and edge cases. Do
 
 Learn to Play and this reference are one corpus. Neither automatically outranks the other. Use the source that treats the question most clearly.
 
-Do not pull card text, errata, or scenario content from other pages unless Tyler changes the source policy.
+Card text comes from the ArkhamDB public API (`sources/arkhamdb-api.md`) when Tyler gives a collector number. Do not pull Campaign Guide or unrevealed scenario content from other pages unless Tyler changes the source policy.

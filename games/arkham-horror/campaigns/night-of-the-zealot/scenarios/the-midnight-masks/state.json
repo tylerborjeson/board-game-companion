@@ -2,13 +2,13 @@
   "scenario": "The Midnight Masks",
   "status": "in_progress",
   "round": 6,
-  "phase": "investigation",
-  "actions_remaining": 1,
+  "phase": "enemy",
+  "actions_remaining": 0,
   "investigator": {
     "name": "Roland Banks",
     "location": "Miskatonic University",
     "resources": 4,
-    "clues": 2,
+    "clues": 0,
     "damage": 2,
     "horror": 1,
     "hand": [
@@ -42,7 +42,8 @@
   },
   "enemies": [
     {"name": "Hunting Nightgaunt", "card": 172, "location": "Northside", "engaged_with": null, "ready": true, "health": 4},
-    {"name": "Acolyte", "card": 169, "location": "Southside", "engaged_with": null, "ready": true, "health": 1, "doom": 1}
+    {"name": "Acolyte", "card": 169, "location": "Southside", "engaged_with": null, "ready": true, "health": 1, "doom": 1},
+    {"name": "Ruth Turner", "card": 141, "code": "01141", "location": "Saint Mary's Hospital", "engaged_with": null, "ready": true, "fight": 2, "health": 4, "evade": 5, "damage": 1, "horror": 0, "victory": 1, "spawn": "St. Mary's Hospital", "forced": "After Ruth Turner is evaded: Add her to the victory display."}
   ],
   "victory_display": ["Peter Warren"],
   "act": {
@@ -63,9 +64,9 @@
     "cultist": {"separate": true, "count": 5, "order_known": false},
     "encounter": {"separate": true, "order_known": false}
   },
-  "last_confirmed_action": "Round 6 investigation: Roland used two Fight actions to defeat Peter Warren, placing Peter Warren in the victory display; Roland discovered 1 clue from his reaction, leaving 1 action remaining",
+  "last_confirmed_action": "Round 6 investigation: Roland spent 2 clues to reveal Ruth Turner (#141) from the separate cultist deck; Ruth Turner spawned at Saint Mary's Hospital; investigation ended",
   "next_decision": {
-    "type": "investigation_action",
-    "prompt": "Roland is alone at Miskatonic University with 1 action remaining."
+    "type": "enemy_phase",
+    "prompt": "Resolve hunter movement, then attacks from ready engaged enemies."
   }
 }

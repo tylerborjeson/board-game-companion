@@ -1,0 +1,18 @@
+---
+description: Fetch Arkham card text from a collector number via the ArkhamDB API
+alwaysApply: true
+---
+
+# ArkhamDB card lookup
+
+When Tyler gives an Arkham collector number (`141`, `#141`, `01141`), fetch the card immediately. Do not ask him to read the card.
+
+```text
+scripts/arkham-card 141
+```
+
+That script hits `https://arkhamdb.com/api/public/card/{code}`. Use the returned stats, traits, keywords, spawn, victory, and ability text.
+
+Do not bulk-download `/api/public/cards/`. Do not commit API responses, flavor dumps, or images. Do not use the API to reveal unrevealed locations, deck order, or Campaign Guide text.
+
+The physical card still wins if Tyler reports a conflict.

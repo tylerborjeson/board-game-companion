@@ -6,6 +6,7 @@ Shared source policy. Each game lists its authorized corpus in `games/<game>/sou
 
 - Use only the sources named for the current game.
 - Card text from Tyler’s physical cards takes precedence when it modifies a general rule.
+- For Arkham, a collector number is enough: run `scripts/arkham-card <number>` and use that revealed-card text.
 - Do not use other websites, editions, expansions, or memory to fill gaps.
 - If the authorized sources do not specify something, say so plainly and ask whether Tyler wants to add a source.
 

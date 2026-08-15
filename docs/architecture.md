@@ -33,4 +33,4 @@ chat/web UI -> narrator adapter -> command API -> deterministic game core -> cam
                       retrieval over authorized rule sources
 ```
 
-Rule answers should come from retrieved source passages, not model memory. This repository stores source identifiers, not copyrighted rulebook text.
+Rule answers should come from retrieved source passages, not model memory. This repository stores source identifiers, not copyrighted rulebook text. Revealed Arkham cards are fetched on demand from the ArkhamDB public API via `scripts/arkham-card`; do not commit API dumps.

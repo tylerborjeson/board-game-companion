@@ -9,6 +9,7 @@ games/arkham-horror/
   sources/
     learn-to-play.md
     rules-reference.md
+    arkhamdb-api.md       revealed-card lookup
     pdfs/                 gitignored
   campaigns/night-of-the-zealot/
     campaign.json
