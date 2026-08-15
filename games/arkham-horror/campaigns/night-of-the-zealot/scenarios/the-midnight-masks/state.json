@@ -3,16 +3,15 @@
   "status": "in_progress",
   "round": 6,
   "phase": "investigation",
-  "actions_remaining": 0,
+  "actions_remaining": 1,
   "investigator": {
     "name": "Roland Banks",
     "location": "Miskatonic University",
     "resources": 4,
-    "clues": 1,
+    "clues": 2,
     "damage": 2,
     "horror": 1,
     "hand": [
-      {"name": "Hyperawareness", "card": 34},
       {"name": "I've had worse...", "card": 184},
       {"name": "Dodge", "card": 23},
       {"card": 19},
@@ -35,7 +34,7 @@
     "Northside": {"revealed": true, "clues": 1, "shroud": 3, "ability": "Spend 5 resources as an action to gain 2 clues from the token pool; group limit once per game"},
     "Southside": {"revealed": false, "clues": 0, "shroud": 2, "enemy_spawned_here": "Acolyte (#169)"},
     "Easttown": {"revealed": true, "clues": 1, "shroud": 2},
-    "Miskatonic University": {"revealed": true, "clues": 2, "shroud": 4, "enemy_spawned_here": "Peter Warren (#139)", "card": 129},
+    "Miskatonic University": {"revealed": true, "clues": 1, "shroud": 4, "card": 129},
     "Rivertown": {"revealed": true, "clues": 1, "shroud": 1}
   },
   "unconfirmed": {
@@ -43,9 +42,9 @@
   },
   "enemies": [
     {"name": "Hunting Nightgaunt", "card": 172, "location": "Northside", "engaged_with": null, "ready": true, "health": 4},
-    {"name": "Peter Warren", "card": 139, "location": "Miskatonic University", "engaged_with": "Roland Banks", "ready": true, "health": 1},
     {"name": "Acolyte", "card": 169, "location": "Southside", "engaged_with": null, "ready": true, "health": 1, "doom": 1}
   ],
+  "victory_display": ["Peter Warren"],
   "act": {
     "name": "Uncovering the Conspiracy",
     "card": 123,
@@ -64,9 +63,9 @@
     "cultist": {"separate": true, "count": 5, "order_known": false},
     "encounter": {"separate": true, "order_known": false}
   },
-  "last_confirmed_action": "Round 5 completed: Nightgaunt moved to Northside; Peter Warren attacked Roland for 1 damage; Upkeep drew Lita Chantler and gained 1 resource; round 6 Mythos placed agenda doom and spawned an Acolyte at Southside with 1 doom",
+  "last_confirmed_action": "Round 6 investigation: Roland used two Fight actions to defeat Peter Warren, placing Peter Warren in the victory display; Roland discovered 1 clue from his reaction, leaving 1 action remaining",
   "next_decision": {
-    "type": "enemy_phase",
-    "prompt": "Investigation Phase complete. Resolve hunter movement, then Peter Warren's attack."
+    "type": "investigation_action",
+    "prompt": "Roland is alone at Miskatonic University with 1 action remaining."
   }
 }
