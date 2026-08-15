@@ -4,6 +4,8 @@
 
 Per-game companion agents, campaign state, and retrieval over authorized rulebooks. Arkham Horror LCG is the first game. The proven loop is: confirm table state, teach the rule, advise without choosing, persist JSON after the player confirms.
 
+JSON is the truth of the table. Markdown is the memory of the story.
+
 ## games
 
 Each game is a self-contained package:
@@ -11,13 +13,30 @@ Each game is a self-contained package:
 ```text
 <game>/
   skills/          companion skills (SKILL.md in the repo)
-  campaigns/       durable campaign and scenario state
-  pdfs/            local authorized sources (gitignored)
+  sources/         authorized URLs; local PDFs in pdfs/ (gitignored)
+  campaigns/       campaign.json and scenarios/<slug>/state.json
 ```
 
 Agents read that game’s skills before play. Do not copy skills into `.cursor/skills/`; the repo copy is canonical.
 
-## boundary
+## layers that matter now
+
+```text
+AGENTS.md
+  ↓ how any agent should behave
+skills/
+  ↓ how to play, adjudicate, and roleplay
+sources/
+  ↓ what rules it may use
+campaign.json
+  ↓ long-term campaign history
+scenarios/<slug>/state.json
+  ↓ what is on the table
+scenarios/<slug>/notes.md
+  ↓ what the story feels like
+```
+
+## later boundary
 
 The companion is split into four layers, plus a retrieval path that is not built yet:
 

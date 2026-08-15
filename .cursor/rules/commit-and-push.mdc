@@ -1,0 +1,13 @@
+---
+description: When Tyler asks to commit and push, commit the full working tree to main
+alwaysApply: true
+---
+
+# Commit and push
+
+When Tyler asks to commit, push, or run a commit-and-push action:
+
+- Commit **all** current project changes to `main` (staged, unstaged, and untracked).
+- Do not split into staged-only commits or leave leftover files behind.
+- Push `main` after the commit.
+- Still skip secrets (`.env`, credentials, private keys) and gitignored files such as PDFs.

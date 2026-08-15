@@ -4,6 +4,8 @@ Multi-agent workspace for board-game companions: per-game agents, campaign track
 
 Arkham Horror: The Card Game is the first game. The repo is meant to grow into an orchestration app — different agents for different games, campaign setup, and semantic / RAG layers over rulebooks.
 
+JSON is the truth of the table. Markdown is the memory of the story.
+
 ## direction
 
 - **Companions as agents.** One (or more) agents per game: narrator, rules teacher, campaign recorder. The player still makes every mechanical choice.
@@ -19,14 +21,16 @@ Canonical state: `arkham-horror/campaigns/night-of-the-zealot/`
 - campaign: *The Night of the Zealot*
 - investigator: Roland Banks
 - current scenario: *The Midnight Masks*
+- live table: `campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
 - next step: Enemy Phase after round 6 investigation
 
 The physical tabletop wins if it disagrees with these files. Update state only after the table result is confirmed.
 
 Skills (behavior, stored in this repo):
 
-- `arkham-horror/skills/campaign-guide/SKILL.md` — Noko narrates, teaches, advises; Tyler controls Roland
-- `arkham-horror/skills/rules-assistant/SKILL.md` — rules lookup from authorized sources
+- `arkham-horror/skills/campaign-guide/SKILL.md` — how to run the campaign
+- `arkham-horror/skills/rules-assistant/SKILL.md` — how to adjudicate
+- `arkham-horror/skills/roleplay-style/SKILL.md` — how a live session should feel and flow
 
 ## layout
 
@@ -35,8 +39,8 @@ Each game is a folder with the same contract:
 ```text
 <game>/
   skills/          SKILL.md agents for that game
-  campaigns/       durable campaign JSON
-  pdfs/            local authorized rulebooks (gitignored)
+  sources/         authorized source list; pdfs/ is gitignored
+  campaigns/       campaign.json plus scenarios/<slug>/state.json
 ```
 
 ```text
@@ -48,4 +52,4 @@ examples/         sample campaign payload
 
 ## next
 
-Next work is likely: local gitignored rulebook storage under each game, and a retrieval path that cites the source instead of answering from memory. App UI and a game core can follow once that loop is stable.
+App UI and a game core can follow once the play loop is stable. Retrieval should cite `sources/` instead of answering from memory.

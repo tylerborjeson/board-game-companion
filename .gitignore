@@ -9,3 +9,4 @@ __pycache__/
 # Local authorized rulebooks / extracts — never commit
 **/*.pdf
 **/pdfs/
+**/sources/pdfs/

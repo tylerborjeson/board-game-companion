@@ -1,15 +1,23 @@
 # Arkham Horror
 
-First game package in this repo. Each later game should follow the same shape: skills for the agents, campaigns for durable state, gitignored local rulebooks.
+First game package in this repo. Each later game should follow the same shape.
 
 ```text
 arkham-horror/
-  skills/                 agent skills (SKILL.md) — live in the repo, not Cursor's skill store
+  skills/                 agent skills (SKILL.md) — in the repo, not Cursor's skill store
     campaign-guide/
     rules-assistant/
+    roleplay-style/
+  sources/
+    README.md             authorized URLs and local filenames
+    pdfs/                 local authorized rulebooks (gitignored)
   campaigns/
-    night-of-the-zealot/  live Night of the Zealot ledger
-  pdfs/                   local authorized rulebooks (gitignored)
+    night-of-the-zealot/
+      campaign.json
+      scenarios/
+        the-gathering/state.json          archived
+        the-midnight-masks/state.json     live table
+        the-midnight-masks/notes.md       story memory
 ```
 
-The in-fiction mentor for this campaign is Noko. Tyler controls Roland Banks.
+JSON is the table. `notes.md` is the story. The in-fiction mentor is Noko. Tyler controls Roland Banks.

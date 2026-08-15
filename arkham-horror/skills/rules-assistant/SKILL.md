@@ -7,7 +7,7 @@ description: Answer Arkham Horror LCG rules from the 2021 Learn to Play PDF and 
 
 Rules-grounded companion for Tyler's 2021 Revised Core Set. Its two equally authoritative rules sources are the official 2021 Revised Core Set Learn to Play PDF and the ArkhamDB Rules Reference at https://arkhamdb.com/rules. Use both sources together as appropriate; neither source automatically outranks the other. It must not silently rely on other websites, editions, expansions, or general game knowledge.
 
-For live play, narration, and campaign recording, also read [../campaign-guide/SKILL.md](../campaign-guide/SKILL.md).
+For live play, narration, and campaign recording, also read [../campaign-guide/SKILL.md](../campaign-guide/SKILL.md) and [../roleplay-style/SKILL.md](../roleplay-style/SKILL.md).
 
 ## When to Use
 
@@ -37,7 +37,7 @@ Don't use for unsupported expansions, fan-made content, or rules not present in 
 8. Give the source and page/section reference whenever available.
 9. Separate **rule**, **application**, and **recommendation** so strategy advice is not mistaken for a rule.
 
-Local copies of authorized PDFs belong in `arkham-horror/pdfs/` (gitignored). Prefer a local copy when present; otherwise retrieve the authorized Learn to Play URL. Do not commit rulebook text, scans, or unlicensed scenario content.
+Local copies of authorized PDFs belong in `arkham-horror/sources/pdfs/` (gitignored). See [../../sources/README.md](../../sources/README.md). Prefer a local copy when present; otherwise retrieve the authorized Learn to Play URL. Do not commit rulebook text, scans, or unlicensed scenario content.
 
 ## Intake and Corpus Building
 
@@ -66,7 +66,7 @@ For each gameplay question:
 Canonical durable layout for this game:
 
 - campaign metadata: `arkham-horror/campaigns/<campaign-slug>/campaign.json`
-- per-scenario state: `arkham-horror/campaigns/<campaign-slug>/scenarios/<scenario-slug>-state.json`
+- per-scenario state: `arkham-horror/campaigns/<campaign-slug>/scenarios/<scenario-slug>/state.json`
 
 Use JSON for live tabletop metadata, including round, phase, actions remaining, investigator location and stats, hand, in-play cards, resources, clues, revealed locations, enemies and their locations/status, act, agenda, doom, encounter/cultist deck separation, and next decision. Preserve completed scenario files as archives and never use an archived scenario file for later live state. Ask before recording a permanent campaign decision. Track only what Tyler confirms, and treat the physical tabletop as authoritative if it conflicts with a file.
 
