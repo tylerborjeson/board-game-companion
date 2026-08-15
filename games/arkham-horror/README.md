@@ -5,6 +5,7 @@ First game package. Shared agent behavior lives in `/assistant`. This folder is 
 ```text
 games/arkham-horror/
   game.md
+  persona.md              Noko — inject verbatim after assistant/soul.md
   sources/
     learn-to-play.md
     rules-reference.md

@@ -11,10 +11,12 @@ JSON is the truth of the table. Markdown is the memory of the story.
 ```text
 AGENTS.md
   ↓ how any agent should enter
+assistant/soul.md + games/<game>/persona.md
+  ↓ inject verbatim — this is the roleplay, on every harness
 assistant/
-  ↓ how to behave, roleplay, adjudicate, and store state
+  ↓ how to behave, adjudicate, and store state
 games/<game>/
-  ↓ character, sources, campaign.json, scenario state
+  ↓ sources, campaign.json, scenario state
 schemas/
   ↓ what valid state must look like
 sessions/<game>/

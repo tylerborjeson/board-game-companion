@@ -10,8 +10,8 @@ Do not dump an app scaffold, database, or frontend unless Tyler asked for that p
 
 ## how to enter
 
-1. Read every file in `assistant/`
-2. Read the current game’s `games/<game>/game.md` and `games/<game>/sources/`
+1. Inject `assistant/soul.md` verbatim, then `games/<current-game>/persona.md` verbatim. Do not rewrite them into a shorter prompt. That pair is the roleplay, on every harness.
+2. Read the rest of `assistant/`, then `games/<game>/game.md` and `games/<game>/sources/`
 3. Ingest that game’s required rules document and verify it loaded
 4. Read `campaign.json` and **only** the file in `active_scenario.path`
 5. Confirm the physical table with Tyler
@@ -20,10 +20,12 @@ Do not dump an app scaffold, database, or frontend unless Tyler asked for that p
 ## split
 
 ```text
-assistant/   how the agent behaves
-games/       game-specific rules and campaign data
-schemas/     what valid state must look like
-sessions/    conversational history and play logs
+assistant/soul.md              shared companion soul — inject verbatim
+games/<game>/persona.md        this game’s character — inject verbatim
+assistant/                     how the agent behaves
+games/                         game-specific rules and campaign data
+schemas/                       what valid state must look like
+sessions/                      conversational history and play logs
 ```
 
 For a given campaign:
@@ -59,4 +61,4 @@ The physical tabletop is authoritative. If files conflict with what Tyler report
 
 ## adding a game
 
-Give it `games/<slug>/` with `game.md`, `sources/`, and `campaigns/`. Reuse `assistant/`. Keep PDFs gitignored.
+Give it `games/<slug>/` with `game.md`, `persona.md`, `sources/`, and `campaigns/`. Reuse `assistant/soul.md`. Keep PDFs gitignored.
