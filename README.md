@@ -1,24 +1,51 @@
 # board-game-companion
 
-A lightweight home for continuing Tyler's Arkham Horror: The Card Game campaign with Hermes.
+Multi-agent workspace for board-game companions: per-game agents, campaign tracking, and retrieval over official rulebooks.
 
-## current campaign
+Arkham Horror: The Card Game is the first game. The repo is meant to grow into an orchestration app — different agents for different games, campaign setup, and semantic / RAG layers over rulebooks.
 
-The canonical campaign state is in `arkham/night-of-the-zealot/`.
+## direction
+
+- **Companions as agents.** One (or more) agents per game: narrator, rules teacher, campaign recorder. The player still makes every mechanical choice.
+- **Campaigns.** Durable JSON (later: events + a store) so a session can pause and resume. Arkham Horror *Night of the Zealot* is the first campaign.
+- **Retrieval.** Learn how to index authorized rule sources, retrieve the right passage for the current question, and keep copyrighted PDFs off git.
+
+Do not commit rulebook PDFs, card scans, or unlicensed scenario text. Store source identifiers and local paths only.
+
+## current campaign (Arkham Horror LCG)
+
+Canonical state: `arkham-horror/campaigns/night-of-the-zealot/`
 
 - campaign: *The Night of the Zealot*
 - investigator: Roland Banks
 - current scenario: *The Midnight Masks*
-- current next step: resolve the Enemy Phase after round 6 investigation
+- next step: Enemy Phase after round 6 investigation
 
-The physical tabletop remains authoritative if it differs from these files. Update the relevant state file only after Tyler confirms what happened at the table.
+The physical tabletop wins if it disagrees with these files. Update state only after the table result is confirmed.
 
-## Hermes guide
+Skills (behavior, stored in this repo):
 
-`arkham/hermes/SKILL.md` contains the campaign-guide behavior: Noko narrates, teaches, and advises, while Tyler alone controls Roland.
+- `arkham-horror/skills/campaign-guide/SKILL.md` — Noko narrates, teaches, advises; Tyler controls Roland
+- `arkham-horror/skills/rules-assistant/SKILL.md` — rules lookup from authorized sources
 
-The repository does not include copyrighted rulebooks, card images, or scenario text. Use the authorized source documents separately during play.
+## layout
 
-## scope for now
+Each game is a folder with the same contract:
 
-This is intentionally *not* an app scaffold yet. It is the durable campaign workspace. The app architecture can come later, after the campaign workflow is understood and stable.
+```text
+<game>/
+  skills/          SKILL.md agents for that game
+  campaigns/       durable campaign JSON
+  pdfs/            local authorized rulebooks (gitignored)
+```
+
+```text
+arkham-horror/    first game
+docs/             architecture notes and the play loop
+schemas/          campaign / command / event JSON contracts
+examples/         sample campaign payload
+```
+
+## next
+
+Next work is likely: local gitignored rulebook storage under each game, and a retrieval path that cites the source instead of answering from memory. App UI and a game core can follow once that loop is stable.
