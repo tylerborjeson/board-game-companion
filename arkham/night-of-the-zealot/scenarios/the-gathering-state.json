@@ -1,0 +1,19 @@
+{
+  "scenario": "The Gathering",
+  "status": "complete",
+  "resolution": "R1 — the house was burned to the ground",
+  "roland": {
+    "mental_trauma": 1,
+    "starting_horror_next_scenario": 1
+  },
+  "experience_earned": 6,
+  "experience_unspent_after_edits": 1,
+  "deck_changes": [
+    "Magnifying Glass level 0 replaced by level 1",
+    "I've had worse... added",
+    "Emergency Cache removed from the ordinary 30-card deck",
+    "Lita Chantler added as a resolution-granted card"
+  ],
+  "victory_display": ["Cellar", "Attic", "Ghoul Priest"],
+  "notes": "Archived scenario. Physical tabletop and confirmed campaign log remain authoritative."
+}

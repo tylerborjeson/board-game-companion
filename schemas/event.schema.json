@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/event.schema.json",
+  "title": "Game Event",
+  "type": "object",
+  "required": ["event_type", "timestamp", "payload"],
+  "properties": {
+    "event_type": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "actor": {"type": "string"},
+    "payload": {"type": "object"}
+  },
+  "additionalProperties": false
+}

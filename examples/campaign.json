@@ -1,0 +1,11 @@
+{
+  "campaign": "Example Campaign",
+  "investigator": "Example Investigator",
+  "player_count": 1,
+  "rules_sources": {
+    "primary": "User-provided authorized rules corpus"
+  },
+  "scenario_order": ["Example Scenario"],
+  "current_scenario": "Example Scenario",
+  "campaign_state": {}
+}
