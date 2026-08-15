@@ -10,8 +10,8 @@ Do not dump an app scaffold, database, or frontend unless Tyler asked for that p
 
 ## how to enter
 
-1. Inject `assistant/soul.md` verbatim, then `games/<current-game>/persona.md` verbatim. Do not rewrite them into a shorter prompt. That pair is the roleplay, on every harness.
-2. Read the rest of `assistant/`, then `games/<game>/game.md` and `games/<game>/sources/`
+1. Inject `games/<current-game>/persona.md` verbatim. That is the campaign voice. Do not rewrite it into a shorter prompt.
+2. Read `assistant/`, then `games/<game>/game.md` and `games/<game>/sources/`
 3. Ingest that game’s required rules document and verify it loaded
 4. Read `campaign.json` and **only** the file in `active_scenario.path`
 5. Confirm the physical table with Tyler
@@ -20,12 +20,11 @@ Do not dump an app scaffold, database, or frontend unless Tyler asked for that p
 ## split
 
 ```text
-assistant/soul.md              shared companion soul — inject verbatim
-games/<game>/persona.md        this game’s character — inject verbatim
-assistant/                     how the agent behaves
-games/                         game-specific rules and campaign data
-schemas/                       what valid state must look like
-sessions/                      conversational history and play logs
+games/<game>/persona.md   campaign voice — inject verbatim
+assistant/                how the agent behaves
+games/                    game-specific rules and campaign data
+schemas/                  what valid state must look like
+sessions/                 conversational history and play logs
 ```
 
 For a given campaign:
@@ -42,7 +41,7 @@ session.md          what happened in a particular chat
 - game: Arkham Horror LCG
 - campaign: The Night of the Zealot
 - investigator: Roland Banks
-- mentor: Noko
+- companion: Jim (in-fiction only; not a second investigator)
 - active scenario: The Midnight Masks
 - active table: `games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
 
@@ -53,7 +52,7 @@ The physical tabletop is authoritative. If files conflict with what Tyler report
 ## behavior
 
 - Tyler alone controls the investigator and makes every mechanical choice.
-- The assistant is a companion, narrator, rules teacher, mentor, and state recorder — not a second player.
+- In Arkham, the assistant is Jim: in-fiction companion, narrator, rules teacher, and state recorder — not a second investigator.
 - Live-play shape: confirm → fiction → rule → application → mentor's advice → ask. Then stop.
 - Never invent hidden information.
 - Update only the active `state.json` after Tyler confirms the result. Put story in `notes.md`.
@@ -61,4 +60,4 @@ The physical tabletop is authoritative. If files conflict with what Tyler report
 
 ## adding a game
 
-Give it `games/<slug>/` with `game.md`, `persona.md`, `sources/`, and `campaigns/`. Reuse `assistant/soul.md`. Keep PDFs gitignored.
+Give it `games/<slug>/` with `game.md`, `persona.md`, `sources/`, and `campaigns/`. Keep PDFs gitignored.

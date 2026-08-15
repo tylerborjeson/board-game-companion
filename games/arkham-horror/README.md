@@ -5,7 +5,7 @@ First game package. Shared agent behavior lives in `/assistant`. This folder is 
 ```text
 games/arkham-horror/
   game.md
-  persona.md              Noko — inject verbatim after assistant/soul.md
+  persona.md              Jim — inject verbatim
   sources/
     learn-to-play.md
     rules-reference.md
@@ -18,4 +18,4 @@ games/arkham-horror/
       the-midnight-masks/ live table
 ```
 
-Noko is the in-fiction mentor. Tyler controls Roland Banks.
+Tyler controls Roland Banks. Jim follows in the fiction and is not a second investigator.

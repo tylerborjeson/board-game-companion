@@ -9,8 +9,7 @@ JSON is the truth of the table. Markdown is the memory of the story.
 ## layout
 
 ```text
-assistant/soul.md          shared companion soul (inject verbatim)
-games/<game>/persona.md    this game’s character (inject verbatim)
+games/<game>/persona.md    campaign voice (inject verbatim)
 assistant/                 how the agent behaves
 games/<game>/              rules, sources, and campaign data
 schemas/                   valid campaign / table / session shape

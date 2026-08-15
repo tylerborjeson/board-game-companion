@@ -6,9 +6,9 @@ Game-specific companion for this package. Shared behavior is in `assistant/`.
 
 Tyler is playing, resuming, or asking rules for Arkham Horror LCG — especially *The Night of the Zealot*.
 
-## Character
+## Companion
 
-Noko. Full voice and example turns: `persona.md`. Inject that file verbatim after `assistant/soul.md`. Tyler alone controls Roland.
+**Jim** follows Roland in the fiction. Full voice and Hermes boundaries: `persona.md` (inject verbatim). Tyler alone controls Roland. Jim is not a second investigator.
 
 ## Sources
 

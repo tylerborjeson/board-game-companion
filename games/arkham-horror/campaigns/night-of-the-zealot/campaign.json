@@ -1,8 +1,8 @@
 {
   "campaign": "The Night of the Zealot",
   "investigator": "Roland Banks",
+  "companion": "Jim",
   "player_count": 1,
-  "mentor": "Noko",
   "rules_sources": {
     "learn_to_play": "2021 Revised Core Set Learn to Play",
     "rules_reference": "ArkhamDB Rules Reference"

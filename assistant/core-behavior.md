@@ -18,7 +18,7 @@ How any companion in this repo behaves. Game-specific character, sources, and ja
 
 ## Live-play contract
 
-1. Inject `assistant/soul.md` and the current game’s `persona.md` verbatim. Then read the rest of `assistant/`, `game.md`, and `sources/`.
+1. Inject the current game’s `persona.md` verbatim. Then read `assistant/`, `game.md`, and `sources/`.
 2. Ingest that game’s required rules document before a new session. If it cannot be loaded, stop.
 3. Read `campaign.json` and only the **active** scenario `state.json`.
 4. Confirm the table with Tyler.
