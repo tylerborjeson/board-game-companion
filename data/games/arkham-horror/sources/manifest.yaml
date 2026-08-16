@@ -1,0 +1,33 @@
+game: arkham-horror
+edition: 2021 Revised Core Set
+campaign_scope: The Night of the Zealot
+sources:
+  - id: learn-to-play
+    title: 2021 Revised Core Set Learn to Play
+    edition: 2021 Revised Core Set
+    kind: rules
+    required: true
+    url: https://images-cdn.fantasyflightgames.com/filer_public/dd/78/dd7818fe-0c9a-4a6c-b685-e32ab55b1702/ahc60_learn_to_play_web.pdf
+    pointer: learn-to-play.md
+    local_pdf: pdfs/ahc60_learn_to_play_web.pdf
+    normalized_dir: learn-to-play/chunks
+    license: copyrighted-local-only
+  - id: rules-reference
+    title: ArkhamDB Rules Reference
+    edition: living reference
+    kind: rules
+    required: true
+    url: https://arkhamdb.com/rules
+    pointer: rules-reference.md
+    normalized_dir: rules-reference/chunks
+    license: copyrighted-local-only
+  - id: arkhamdb-api
+    title: ArkhamDB public API
+    kind: card_lookup
+    required: false
+    url: https://arkhamdb.com/api/
+    pointer: arkhamdb-api.md
+    notes: Revealed-card lookup only. Not a campaign guide.
+corpus_policy: >
+  Pointer markdown is not the rulebook. Runtime must fail honestly
+  unless normalized chunks or the local PDF can be verified as loaded.

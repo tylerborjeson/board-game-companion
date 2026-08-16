@@ -5,7 +5,8 @@ Session log. Not canonical state.
 - game: arkham-horror
 - campaign: The Night of the Zealot
 - scenario: The Midnight Masks
-- opening/closing table: `games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
+- opening/closing table (path at the time): `games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
+- current path: `data/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
 
 ## what happened in this chat
 

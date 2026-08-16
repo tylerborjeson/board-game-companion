@@ -1,13 +1,52 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/event.schema.json",
-  "title": "Game Event",
+  "title": "GameEvent",
   "type": "object",
-  "required": ["event_type", "timestamp", "payload"],
+  "required": [
+    "event_id",
+    "type",
+    "occurred_at",
+    "round",
+    "phase",
+    "source",
+    "confirmed",
+    "payload"
+  ],
   "properties": {
-    "event_type": {"type": "string"},
-    "timestamp": {"type": "string", "format": "date-time"},
-    "actor": {"type": "string"},
+    "event_id": {"type": "string", "format": "uuid"},
+    "type": {
+      "type": "string",
+      "enum": [
+        "action_started",
+        "skill_test_declared",
+        "skill_test_resolved",
+        "card_played",
+        "enemy_defeated",
+        "clue_discovered",
+        "clue_spent",
+        "cultist_revealed",
+        "enemy_moved",
+        "enemy_attack_resolved",
+        "phase_advanced",
+        "resource_gained",
+        "damage_assigned",
+        "horror_assigned",
+        "physical_correction_recorded",
+        "session_paused"
+      ]
+    },
+    "occurred_at": {"type": "string", "format": "date-time"},
+    "round": {"type": "integer", "minimum": 1},
+    "phase": {
+      "type": "string",
+      "enum": ["mythos", "investigation", "enemy", "upkeep"]
+    },
+    "source": {
+      "type": "string",
+      "enum": ["tyler_reported", "physical_correction", "system"]
+    },
+    "confirmed": {"type": "boolean"},
     "payload": {"type": "object"}
   },
   "additionalProperties": false

@@ -1,13 +1,14 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/command.schema.json",
-  "title": "Player Command",
+  "title": "CommandProposal",
   "type": "object",
-  "required": ["type"],
+  "required": ["type", "confirmed", "payload"],
   "properties": {
     "type": {"type": "string"},
-    "investigator_id": {"type": "string"},
-    "location_id": {"type": "string"},
+    "confirmed": {"type": "boolean"},
+    "needs_confirmation": {"type": "boolean"},
+    "uncertainty": {"type": ["string", "null"]},
     "payload": {"type": "object"}
   },
   "additionalProperties": false

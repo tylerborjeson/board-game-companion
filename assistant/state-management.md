@@ -1,11 +1,12 @@
 # state management
 
-How durable state is stored and updated for every game.
+Deprecated. Canonical layout is `data/campaigns/` and `docs/state-and-events.md`.
 
 ```text
-games/<game>/campaigns/<campaign-slug>/campaign.json
-games/<game>/campaigns/<campaign-slug>/scenarios/<scenario-slug>/state.json
-games/<game>/campaigns/<campaign-slug>/scenarios/<scenario-slug>/notes.md
+data/campaigns/<campaign-slug>/campaign.json
+data/campaigns/<campaign-slug>/scenarios/<scenario-slug>/state.json
+data/campaigns/<campaign-slug>/scenarios/<scenario-slug>/events.jsonl
+data/campaigns/<campaign-slug>/scenarios/<scenario-slug>/notes.md
 sessions/<game>/<date>-<slug>.md
 ```
 
@@ -23,7 +24,7 @@ JSON is the truth of the table. Markdown is the memory of the story.
 ```json
 "active_scenario": {
   "slug": "the-midnight-masks",
-  "path": "games/arkham-horror/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json",
+    "path": "data/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json",
   "status": "in_progress"
 }
 ```

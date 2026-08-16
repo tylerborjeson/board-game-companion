@@ -7,6 +7,7 @@
   "properties": {
     "campaign": {"type": "string"},
     "investigator": {"type": "string"},
+    "companion": {"type": "string"},
     "player_count": {"type": "integer", "minimum": 1},
     "scenario_order": {"type": "array", "items": {"type": "string"}, "minItems": 1},
     "current_scenario": {"type": "string"},

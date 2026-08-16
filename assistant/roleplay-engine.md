@@ -1,5 +1,5 @@
 # roleplay engine
 
-Each game has one voice file: `games/<current-game>/persona.md`. Inject it verbatim. Do not rewrite it into a shorter prompt.
+Deprecated policy note. Canonical voice: `data/games/arkham-horror/persona.md` (Noko). Inject it verbatim.
 
-For Arkham, that file is Jim: in-fiction companion beside Roland, same Hermes boundaries, not a second investigator. Same model + that file = the same campaign voice on any harness.
+Historical: this file once named the companion Jim. Jim is not the active identity.

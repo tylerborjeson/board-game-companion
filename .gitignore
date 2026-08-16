@@ -5,8 +5,14 @@ __pycache__/
 *.db
 *.sqlite
 .DS_Store
+*.egg-info/
+dist/
+build/
 
 # Local authorized rulebooks / extracts — never commit
 **/*.pdf
 **/pdfs/
 **/sources/pdfs/
+**/sources/**/chunks/*.json
+**/sources/**/chunks/*.txt
+**/sources/**/chunks/*.md

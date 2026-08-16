@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/turn-input.schema.json",
+  "title": "TurnInput",
+  "type": "object",
+  "required": ["text"],
+  "properties": {
+    "text": {"type": "string", "minLength": 1},
+    "submitted_at": {"type": "string", "format": "date-time"},
+    "confirmed_physical": {"type": "boolean"},
+    "campaign_id": {"type": ["string", "null"]}
+  },
+  "additionalProperties": false
+}

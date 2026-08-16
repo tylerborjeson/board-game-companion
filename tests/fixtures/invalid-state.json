@@ -1,0 +1,24 @@
+{
+  "scenario": "The Midnight Masks",
+  "status": "in_progress",
+  "round": 0,
+  "phase": "not-a-phase",
+  "actions_remaining": -1,
+  "investigator": {
+    "name": "Roland Banks",
+    "location": "Miskatonic University",
+    "resources": -2,
+    "clues": -1,
+    "damage": 0,
+    "horror": 0
+  },
+  "locations": {},
+  "enemies": [],
+  "act": {},
+  "agenda": {},
+  "decks": {},
+  "next_decision": {
+    "type": "broken",
+    "prompt": "this fixture must fail validation"
+  }
+}

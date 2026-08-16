@@ -1,0 +1,47 @@
+{
+  "label": "test fixture — not live campaign data",
+  "before": {
+    "scenario": "The Midnight Masks",
+    "status": "in_progress",
+    "round": 6,
+    "phase": "investigation",
+    "actions_remaining": 1,
+    "investigator": {
+      "name": "Roland Banks",
+      "location": "Miskatonic University",
+      "resources": 4,
+      "clues": 0,
+      "damage": 2,
+      "horror": 1
+    },
+    "locations": {
+      "Miskatonic University": {"revealed": true, "clues": 1, "shroud": 4}
+    },
+    "enemies": [
+      {
+        "name": "Peter Warren",
+        "location": "Miskatonic University",
+        "engaged_with": "Roland Banks",
+        "ready": true,
+        "health": 1
+      }
+    ],
+    "victory_display": [],
+    "act": {"name": "Uncovering the Conspiracy"},
+    "agenda": {"name": "Predator or Prey?", "doom": 5, "threshold": 6},
+    "decks": {"encounter": {"order_known": false}},
+    "next_decision": {"type": "action", "prompt": "Resolve the current action."}
+  },
+  "events": [
+    {
+      "type": "enemy_defeated",
+      "confirmed": true,
+      "payload": {"enemy": "Peter Warren"}
+    },
+    {
+      "type": "clue_discovered",
+      "confirmed": true,
+      "payload": {"location": "Miskatonic University", "amount": 1}
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/tylerborjeson/board-game-companion/schemas/turn-output.schema.json",
+  "title": "TurnOutput",
+  "type": "object",
+  "required": [
+    "table_summary",
+    "fiction",
+    "rule",
+    "application",
+    "mentor_advice",
+    "next_question",
+    "citations",
+    "clarification_needed",
+    "state_mutated"
+  ],
+  "properties": {
+    "table_summary": {"type": "string"},
+    "fiction": {"type": "string"},
+    "rule": {"type": "string"},
+    "application": {"type": "string"},
+    "mentor_advice": {"type": "string"},
+    "next_question": {"type": "string"},
+    "citations": {"type": "array", "items": {"type": "object"}},
+    "clarification_needed": {"type": "boolean"},
+    "state_mutated": {"type": "boolean"},
+    "error": {"type": ["string", "null"]}
+  },
+  "additionalProperties": true
+}

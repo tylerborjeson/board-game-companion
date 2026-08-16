@@ -1,6 +1,6 @@
 # core behavior
 
-How any companion in this repo behaves. Game-specific character, sources, and jargon live in `games/<game>/game.md`.
+Deprecated. Canonical contracts: `docs/` and `src/board_game_companion/`. Persona: `data/games/arkham-horror/persona.md` (Noko).
 
 ## Roles
 

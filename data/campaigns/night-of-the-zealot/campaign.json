@@ -1,0 +1,30 @@
+{
+  "campaign": "The Night of the Zealot",
+  "investigator": "Roland Banks",
+  "companion": "Noko",
+  "player_count": 1,
+  "rules_sources": {
+    "learn_to_play": "2021 Revised Core Set Learn to Play",
+    "rules_reference": "ArkhamDB Rules Reference"
+  },
+  "scenario_order": ["The Gathering", "The Midnight Masks", "The Devourer Below"],
+  "current_scenario": "The Midnight Masks",
+  "active_scenario": {
+    "slug": "the-midnight-masks",
+    "path": "data/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json",
+    "status": "in_progress"
+  },
+  "campaign_state": {
+    "mental_trauma": 1,
+    "experience_unspent": 1,
+    "lita_chantler_earned": true,
+    "lita_chantler_in_deck": true,
+    "campaign_log": ["The house was burned to the ground"],
+    "victory_display": ["Cellar", "Attic", "Ghoul Priest"]
+  },
+  "component_proxies": [
+    {"card": "Swarm of Rats", "collector_number": "159", "copies": 3},
+    {"card": "Flesh-Eater", "collector_number": "118", "copies": 1},
+    {"card": "Icy Ghoul", "collector_number": "119", "copies": 1}
+  ]
+}

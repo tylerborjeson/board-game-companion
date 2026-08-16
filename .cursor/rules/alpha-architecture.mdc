@@ -1,0 +1,14 @@
+---
+description: Alpha architecture lives in docs and src, not in prompt-only files
+alwaysApply: true
+---
+
+# Alpha architecture
+
+Product behavior is defined in `docs/` and enforced in `src/board_game_companion/`. Cursor rules are not the runtime.
+
+- Companion identity: Noko (`data/games/arkham-horror/persona.md`, inject verbatim)
+- Live table: `data/campaigns/night-of-the-zealot/scenarios/the-midnight-masks/state.json`
+- The model proposes; local code validates and commits
+- Physical tabletop wins over files
+- Do not invent hidden information or auto-merge Hermes state

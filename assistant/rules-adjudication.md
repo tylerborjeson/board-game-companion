@@ -1,6 +1,6 @@
 # rules adjudication
 
-Shared source policy. Each game lists its authorized corpus in `games/<game>/sources/`.
+Deprecated. Canonical source policy: `docs/retrieval-and-sources.md` and `data/games/arkham-horror/sources/`.
 
 ## Authority
 
