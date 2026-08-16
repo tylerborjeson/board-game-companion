@@ -66,4 +66,4 @@ The physical tabletop is authoritative. If files conflict with what Tyler report
 
 ## adding a game
 
-Give it `data/games/<slug>/` with `game.md`, `persona.md`, `sources/`, and a campaign under `data/campaigns/`. Keep PDFs gitignored.
+Give it `data/games/<slug>/` with `game.md`, `persona.md`, `sources/`, and a campaign under `data/campaigns/`. Keep PDFs gitignored. Convert publisher PDFs to retrieval Markdown with `scripts/pdf_to_rules_md.py`; keep those extracts gitignored too.

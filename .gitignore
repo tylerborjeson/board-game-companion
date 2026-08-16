@@ -16,4 +16,4 @@ build/
 **/sources/**/chunks/*.json
 **/sources/**/chunks/*.txt
 **/sources/**/chunks/*.md
-data/games/too-many-bones/rulebooks/
+data/games/*/rulebooks/

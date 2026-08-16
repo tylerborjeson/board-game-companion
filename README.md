@@ -61,6 +61,8 @@ Wispr Flow: dictate externally, paste or type the text, submit one turn. See `do
 
 Authorized source **identifiers** live in `data/games/arkham-horror/sources/`. Place the Learn to Play PDF under `data/games/arkham-horror/sources/pdfs/` (gitignored). Normalized chunks belong in the gitignored `chunks/` folders. `python scripts/ingest_sources.py` reports whether the corpus is actually available. It will not pretend a pointer file is the rulebook.
 
+For a new game’s publisher PDF, convert locally with `python scripts/pdf_to_rules_md.py <file.pdf> -o data/games/<slug>/rulebooks/<name>.md` after `pip install -e ".[pdf]"`. Keep the PDF and the Markdown extract gitignored.
+
 ## example turns
 
 See `docs/play-loop.md` and `tests/companion/test_orchestrator.py` for a rules question, a confirmed action, a mixed dictated turn, and an ambiguous result that must clarify instead of commit.
